@@ -1,6 +1,5 @@
 import cv2
 from hand_tracking import hand_tracking
-from face_mesh import face_mesh_tracking
 from pose_detection import pose_detection
 
 # Inicjalizacja kamery
@@ -13,7 +12,6 @@ while cap.isOpened():
 
     # Przetwarzanie obrazu za pomocą wszystkich trzech funkcji
     frame = hand_tracking(frame)
-    frame = face_mesh_tracking(frame)
     frame = pose_detection(frame)
 
     # Wyświetlanie obrazu
